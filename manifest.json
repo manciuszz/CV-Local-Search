@@ -1,0 +1,29 @@
+{
+  "name": "CV-Local Search",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "",
+  "homepage_url": "http://mmworks.azurewebsites.net",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "page": "src/bg/background.html",
+    "persistent": true
+  },
+  "browser_action": {
+    "default_icon": "icons/icon19.png",
+    "default_title": "CV Search",
+    "default_popup": "src/browser_action/browser_action.html"
+  },
+  "permissions": [
+    "https://www.cv.lt/",
+    "https://www.cvmarket.lt/",
+    "https://www.cvonline.lt/",
+    "https://www.cvbankas.lt/",
+    "https://www.gerapraktika.lt/"
+  ]
+}

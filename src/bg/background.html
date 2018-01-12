@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV-Search</title>
+    <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <script src="../../assets/angular/angular.min.js"></script>
+    <script src="background.js"></script>
+</head>
+
+<body ng-app="cvSearchApp">
+    <section>
+        <div class="page-header">
+            <h1 class="text-center">CV-Local Search</h1></div>
+    </section>
+    <section>
+        <div ng-controller="repeatController" class="container">
+            <a href="http://cv.lt"><h1>CV.LT</h1></a>
+            <div class="tbl-header">
+                <table cellpadding="0" cellspacing="0" border="0">
+                  <thead>
+                    <tr>
+                      <th>PASKELBTA<br>Peržiūros</th>
+                      <th>PAREIGOS</th>
+                      <th>MIESTAS</th>
+                      <th>GALIOJIMAS</th>
+                      <th>ĮMONĖ</th>
+                    </tr>
+                  </thead>
+                </table>
+            </div>
+            <div class="tbl-content">
+                <table cellpadding="0" cellspacing="0" border="0">
+                    <tbody>
+                        <tr ng-repeat="job in cvLTjobs" ng-bind-html="job.html"></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <a href="http://CVBankas.LT"><h1>CVBankas.LT</h1></a>
+            <div class="tbl-header">
+                <table cellpadding="0" cellspacing="0" border="0">
+                  <thead>
+                    <tr>
+                      <th>LOGO</th>
+                      <th>PAREIGOS</th>
+                      <th>Darbo vieta</th>
+                      <th>ĮMONĖ <br> GALIOJIMAS</th>
+                    </tr>
+                  </thead>
+                </table>
+            </div>
+            <div class="tbl-content">
+                <table cellpadding="0" cellspacing="0" border="0">
+                    <tbody>
+                        <tr ng-repeat="job in cvBankasLTjobs">
+                            <td ng-bind-html="job.logo"></td>
+                            <td ng-bind-html="job.pareigos"></td>
+                            <td ng-bind-html="job.miestas"></td>
+                            <td ng-bind-html="job.imone_galiojimas"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <a href="http://CVOnline.LT"><h1>CVOnline.LT</h1></a>
+            <div class="tbl-header">
+                <table cellpadding="0" cellspacing="0" border="0">
+                  <thead>
+                    <tr>
+                      <th>PAREIGOS</th>
+                      <th>MIESTAS</th>
+                      <th>ĮMONĖ</td>
+                      <th>GALIOJIMAS</th>
+                    </tr>
+                  </thead>
+                </table>
+            </div>
+            <div class="tbl-content">
+                <table cellpadding="0" cellspacing="0" border="0">
+                    <tbody>
+                        <tr ng-repeat="job in cvOnlineLTjobs">
+                            <td ng-bind-html="job.pareigos"></td>
+                            <td ng-bind-html="job.miestas"></td>
+                            <td ng-bind-html="job.imone"></td>
+                            <td ng-bind-html="job.galiojimas"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <a href="http://CVMarket.LT"><h1>CVMarket.LT</h1></a>
+            <div class="tbl-header">
+                <table cellpadding="0" cellspacing="0" border="0">
+                  <thead>
+                    <tr>
+                      <th>LOGO</th>
+                      <th>PAREIGOS</th>
+                      <th>MIESTAS</th>
+                      <th>ĮMONĖ <br> GALIOJIMAS</th>
+                    </tr>
+                  </thead>
+                </table>
+            </div>
+            <div class="tbl-content">
+                <table cellpadding="0" cellspacing="0" border="0">
+                    <tbody>
+                        <tr ng-repeat="job in cvMarketLTjobs">
+                            <td ng-bind-html="job.something"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <a href="http://GeraPraktika.LT"><h1>GeraPraktika.LT</h1></a>
+            <div class="tbl-header">
+                <table cellpadding="0" cellspacing="0" border="0">
+                  <thead>
+                    <tr>
+                      <th>LOGO</th>
+                      <th>PAREIGOS</th>
+                      <th>MIESTAS</th>
+                      <th>ĮMONĖ <br> GALIOJIMAS</th>
+                    </tr>
+                  </thead>
+                </table>
+            </div>
+            <div class="tbl-content">
+                <table cellpadding="0" cellspacing="0" border="0">
+                    <tbody>
+                        <tr ng-repeat="practice in geraPraktikaLTpractice">
+                            <td ng-bind-html="practice.something"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </section>
+    <script src="../../assets/jquery/jquery.min.js"></script>
+    <script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
